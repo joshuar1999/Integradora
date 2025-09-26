@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seguridad N.V. — Somos</title>
+  <meta name="description" content="Quiénes somos — Seguridad N.V. Misión, visión y valores.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>:root{--blue:#0f4c81;--red:#e11d48;--black:#111827}</style>
+</head>
+<body class="antialiased bg-gray-50 text-gray-800">
+
+  <!-- NAV (copiado igual en todas las páginas) -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="logo" class="h-10">
+        <span class="font-bold text-xl" style="color:var(--blue)">Seguridad N.V.</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html" class="text-[var(--blue)]">Somos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="md:hidden">
+        <button onclick="document.getElementById('mobileMenu2').classList.toggle('hidden')" aria-label="Abrir menú">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu2" class="hidden md:hidden bg-white border-t shadow">
+      <nav class="flex flex-col px-6 py-4 gap-2">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html" class="text-[var(--blue)]">Somos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-28">
+    <section class="py-12">
+      <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-3xl font-bold" style="color:var(--blue)">Quiénes somos</h1>
+        <p class="mt-4 text-gray-700">Seguridad N.V. es una empresa dedicada a la instalación, venta y mantenimiento de equipos de seguridad electrónicos. Nuestra experiencia cubre proyectos residenciales, comerciales e industriales.</p>
+
+        <h2 class="mt-8 text-2xl font-semibold">Misión</h2>
+        <p class="mt-2 text-gray-600">Brindar soluciones de seguridad electrónica integrales que permitan a nuestros clientes operar con tranquilidad, mediante tecnología de calidad y servicio técnico calificado.</p>
+
+        <h2 class="mt-8 text-2xl font-semibold">Visión</h2>
+        <p class="mt-2 text-gray-600">Ser la empresa de referencia en Puebla y la región en sistemas de seguridad electrónica y comunicaciones.</p>
+
+        <h2 class="mt-8 text-2xl font-semibold">Valores</h2>
+        <ul class="list-disc pl-5 mt-2 text-gray-600">
+          <li>Profesionalismo</li>
+          <li>Compromiso</li>
+          <li>Transparencia</li>
+          <li>Innovación</li>
+        </ul>
+
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-semibold">Nuestra experiencia</h3>
+            <p class="mt-2 text-gray-600">Proyectos de CCTV, alarmas, radiocomunicación y soluciones energéticas con más de X años de experiencia (ajusta X con tus años).</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-semibold">Equipo técnico</h3>
+            <p class="mt-2 text-gray-600">Técnicos certificados y personal capacitado para diseño, instalación y mantenimiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (igual en todas) -->
+  <footer class="bg-[#111827] text-gray-200 py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+      <div>
+        <img src="assets/logo.png" alt="logo" class="h-10 mb-2">
+        <p class="text-sm">Seguridad N.V. — Instalación y mantenimiento de equipos de seguridad electrónicos.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">Contacto</h4>
+        <p class="text-sm mt-2">Tel: <a href="tel:7571341959" class="underline">757 134 1959</a></p>
+        <p class="text-sm">Dirección: Calle M. Matamoros #46, Col. Centro, Tulcingo de Valle, Puebla.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">Redes</h4>
+        <div class="flex gap-3 mt-2">
+          <a href="#" class="underline text-sm">Facebook</a>
+          <a href="#" class="underline text-sm">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-500 mt-6">&copy; 2025 Seguridad N.V.</div>
+  </footer>
+
+</body>
+</html>

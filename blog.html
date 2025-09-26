@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Seguridad N.V. — Blog</title>
+  <meta name="description" content="Blog de Seguridad N.V.: artículos y novedades sobre seguridad electrónica.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>:root{--blue:#0f4c81}</style>
+</head>
+<body class="antialiased bg-gray-50 text-gray-800">
+
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="logo" class="h-10">
+        <span class="font-bold text-xl" style="color:var(--blue)">Seguridad N.V.</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
+        <a href="index.html">Inicio</a>
+        <a href="somos.html">Somos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="blog.html" class="text-[var(--blue)]">Blog</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="md:hidden">
+        <button onclick="document.getElementById('mobileMenu5').classList.toggle('hidden')" aria-label="Abrir menú">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu5" class="hidden md:hidden bg-white border-t shadow">
+      <nav class="flex flex-col px-6 py-4 gap-2">
+        <a href="index.html">Inicio</a>
+        <a href="somos.html">Somos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="blog.html" class="text-[var(--blue)]">Blog</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-28">
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <h1 class="text-3xl font-bold" style="color:var(--blue)">Blog</h1>
+        <p class="mt-2 text-gray-600">Artículos, guías y novedades sobre seguridad electrónica.</p>
+
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <!-- Post 1 -->
+          <article class="bg-white p-6 rounded-xl shadow">
+            <h2 class="font-bold text-xl">¿Cómo elegir cámaras para tu negocio?</h2>
+            <p class="mt-2 text-sm text-gray-600">Consejos para seleccionar resolución, lentes y almacenamiento. <a href="#" class="underline">Leer más</a></p>
+            <p class="text-xs text-gray-400 mt-3">Publicado: 2025-01-15</p>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="bg-white p-6 rounded-xl shadow">
+            <h2 class="font-bold text-xl">Mantenimiento preventivo de alarmas</h2>
+            <p class="mt-2 text-sm text-gray-600">Checklist y periodicidad recomendada para mantener sistemas confiables. <a href="#" class="underline">Leer más</a></p>
+            <p class="text-xs text-gray-400 mt-3">Publicado: 2025-03-10</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#111827] text-gray-200 py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+      <div><img src="assets/logo.png" alt="logo" class="h-10 mb-2"><p class="text-sm">Seguridad N.V.</p></div>
+      <div><h4 class="font-semibold">Contacto</h4><p class="text-sm mt-2">Tel: <a href="tel:7571341959" class="underline">757 134 1959</a></p></div>
+      <div><h4 class="font-semibold">Redes</h4><div class="flex gap-3 mt-2"><a href="#" class="underline text-sm">Facebook</a><a href="#" class="underline text-sm">Instagram</a></div></div>
+    </div>
+    <div class="text-center text-xs text-gray-500 mt-6">&copy; 2025 Seguridad N.V.</div>
+  </footer>
+</body>
+</html>
