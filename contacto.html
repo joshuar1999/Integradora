@@ -3,85 +3,127 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Seguridad N.V. — Contacto</title>
-  <meta name="description" content="Contacto — Seguridad N.V. Dirección, teléfono y formulario de contacto.">
+  <title>Seguridad N.V — Contacto</title>
+  <meta name="description" content="Contáctanos — Seguridad N.V. Instalación, venta y mantenimiento de equipos de seguridad electrónica.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>:root{--blue:#0f4c81}</style>
+  <style>
+    :root {
+      --blue:#1d4ed8;
+      --red:#dc2626;
+      --black:#000000;
+      --gray:#f3f4f6;
+    }
+
+    /* ✨ Navbar con efecto brillante */
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: white;
+      transition: width 0.3s ease;
+      box-shadow: 0 0 10px white;
+    }
+    .nav-link:hover {
+      color: white;
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #1d4ed8, 0 0 30px #1d4ed8;
+      transform: scale(1.05);
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* 💚 Efecto pulso WhatsApp */
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+    .pulse { animation: pulse 3s infinite; }
+  </style>
 </head>
+
 <body class="antialiased bg-gray-50 text-gray-800">
 
-  <!-- NAV -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <!-- NAVBAR NEGRO -->
+  <header class="fixed top-0 left-0 w-full bg-[var(--black)] shadow z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <img src="assets/logo.png" alt="logo" class="h-10">
-        <span class="font-bold text-xl" style="color:var(--blue)">Seguridad N.V.</span>
+        <img src="./IMG/logo.jfif" alt="Seguridad N.V logo" class="h-14 w-14 rounded-full object-cover">
+        <span class="font-bold text-xl text-white">SeguridadN.V</span>
       </a>
+
       <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
-        <a href="index.html">Inicio</a>
-        <a href="somos.html">Somos</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="blog.html">Blog</a>
-        <a href="contacto.html" class="text-[var(--blue)]">Contacto</a>
+        <a href="index.html" class="nav-link text-white">Inicio</a>
+        <a href="somos.html" class="nav-link text-white">Somos</a>
+        <a href="servicios.html" class="nav-link text-white">Servicios</a>
+        <a href="blog.html" class="nav-link text-white">Blog</a>
+        <a href="contacto.html" class="nav-link text-[var(--blue)] font-bold">Contacto</a>
       </nav>
+
       <div class="md:hidden">
-        <button onclick="document.getElementById('mobileMenu6').classList.toggle('hidden')" aria-label="Abrir menú">
+        <button id="mobileBtn" aria-label="Abrir menú" class="text-white" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
     </div>
-    <div id="mobileMenu6" class="hidden md:hidden bg-white border-t shadow">
-      <nav class="flex flex-col px-6 py-4 gap-2">
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[var(--black)] border-t border-gray-700 shadow">
+      <nav class="flex flex-col px-6 py-4 gap-2 text-white">
         <a href="index.html">Inicio</a>
         <a href="somos.html">Somos</a>
         <a href="servicios.html">Servicios</a>
         <a href="blog.html">Blog</a>
-        <a href="contacto.html" class="text-[var(--blue)]">Contacto</a>
+        <a href="contacto.html" class="text-[var(--blue)] font-semibold">Contacto</a>
       </nav>
     </div>
   </header>
 
+  <!-- CONTENIDO -->
   <main class="pt-28">
-    <section class="py-12">
-      <div class="max-w-4xl mx-auto px-6">
-        <h1 class="text-3xl font-bold" style="color:var(--blue)">Contacto</h1>
-        <p class="mt-2 text-gray-600">Contáctanos por teléfono, WhatsApp, o manda un mensaje directo mediante el formulario.</p>
+    <section class="py-12 bg-[var(--gray)]">
+      <div class="max-w-5xl mx-auto px-6">
+        <h1 class="text-4xl font-extrabold text-[var(--blue)] mb-2">Contáctanos</h1>
+        <p class="text-gray-700 mb-8 text-lg">Estamos disponibles para asesorarte en instalación, mantenimiento o cotización de equipos de seguridad.</p>
 
-        <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="grid md:grid-cols-2 gap-10">
+
+          <!-- INFORMACIÓN DE CONTACTO -->
           <div>
-            <h3 class="font-semibold">Datos</h3>
-            <p class="mt-2">Tel (informes): <a href="tel:7571341959" class="underline">757 134 1959</a></p>
-            <p class="mt-1">Dirección: Calle M. Matamoros #46, Col. Centro (Enfrente de la paquetería Puebla Express), Tulcingo de Valle, Puebla.</p>
-            <p class="mt-4">Horario: Lun-Vie 9:00 - 18:00</p>
+            <h3 class="text-2xl font-bold text-[var(--blue)] mb-2">Datos de contacto</h3>
+            <p class="mb-3">📞 Tel: <a href="tel:7571341959" class="underline text-[var(--black)]">757 134 1959</a></p>
+            <p class="mb-3">📍 Dirección: Calle M. Matamoros #46, Col. Centro (frente a Paquetería Puebla Express), Tulcingo de Valle, Puebla.</p>
+            <p class="mb-3">🕐 Horario: Lunes a Viernes 9:00 a 18:00 hrs</p>
+            <p class="mb-6">✉️ Correo: <a href="mailto:seguridadnv@gmail.com" class="underline">seguridadnv@gmail.com</a></p>
 
-            <h4 class="mt-6 font-semibold">Mapa</h4>
-            <div class="mt-2">
-              <iframe
-                src="https://www.google.com/maps?q=Calle+M.+Matamoros+46,+Tulcingo+de+Valle,+Puebla&output=embed"
-                class="w-full h-48 rounded-md border-0"
-                loading="lazy"></iframe>
-            </div>
+            <iframe
+              src="https://www.google.com/maps?q=Calle+M.+Matamoros+46,+Tulcingo+de+Valle,+Puebla&output=embed"
+              class="w-full h-56 rounded-lg border-0 shadow-lg"
+              loading="lazy"></iframe>
           </div>
 
+          <!-- FORMULARIO -->
           <div>
-            <h3 class="font-semibold">Envíanos un mensaje</h3>
-
-            <!-- El formulario envía a contact.php (ver archivo contact.php abajo) -->
-            <form action="contact.php" method="post" class="mt-3 grid gap-3">
-              <input name="nombre" required placeholder="Tu nombre" class="p-3 rounded-md border">
-              <input name="correo" type="email" required placeholder="Tu correo" class="p-3 rounded-md border">
-              <input name="telefono" placeholder="Teléfono (opcional)" class="p-3 rounded-md border">
-              <textarea name="mensaje" required placeholder="Mensaje" rows="6" class="p-3 rounded-md border"></textarea>
-              <button type="submit" class="px-4 py-3 bg-[var(--blue)] text-white rounded-md font-semibold">Enviar mensaje</button>
+            <h3 class="text-2xl font-bold text-[var(--blue)] mb-4">Envíanos un mensaje</h3>
+            <form action="contact.php" method="post" class="bg-white p-6 rounded-xl shadow-lg grid gap-4">
+              <input name="nombre" required placeholder="Tu nombre" class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none transition">
+              <input name="correo" type="email" required placeholder="Tu correo electrónico" class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none transition">
+              <input name="telefono" placeholder="Teléfono (opcional)" class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none transition">
+              <textarea name="mensaje" required placeholder="Escribe tu mensaje aquí..." rows="6" class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none transition"></textarea>
+              <button type="submit" class="px-4 py-3 bg-[var(--blue)] text-white font-semibold rounded-md hover:bg-blue-700 transition">Enviar mensaje</button>
             </form>
 
-            <!-- Mensajes simples por querystring (opcional) -->
-            <div class="mt-3 text-sm text-green-600" id="msgOK" style="display:none">Mensaje enviado. Gracias.</div>
-            <div class="mt-3 text-sm text-red-600" id="msgErr" style="display:none">Error al enviar. Intenta otra vez.</div>
+            <!-- Mensajes de resultado -->
+            <div class="mt-3 text-sm text-green-600 hidden" id="msgOK">✅ Mensaje enviado. ¡Gracias por contactarnos!</div>
+            <div class="mt-3 text-sm text-red-600 hidden" id="msgErr">❌ Error al enviar. Intenta de nuevo.</div>
             <script>
-              // Muestra mensajes si la URL contiene ?enviado=1 o ?error=1
               const params = new URLSearchParams(window.location.search);
               if (params.get('enviado') === '1') document.getElementById('msgOK').style.display = 'block';
               if (params.get('error') === '1') document.getElementById('msgErr').style.display = 'block';
@@ -92,14 +134,46 @@
     </section>
   </main>
 
-  <footer class="bg-[#111827] text-gray-200 py-8 mt-12">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
-      <div><img src="assets/logo.png" alt="logo" class="h-10 mb-2"><p class="text-sm">Seguridad N.V.</p></div>
-      <div><h4 class="font-semibold">Contacto</h4><p class="text-sm mt-2">Tel: <a href="tel:7571341959" class="underline">757 134 1959</a></p><p class="text-sm">Calle M. Matamoros #46, Tulcingo de Valle, Puebla.</p></div>
-      <div><h4 class="font-semibold">Redes</h4><div class="flex gap-3 mt-2"><a href="#" class="underline text-sm">Facebook</a><a href="#" class="underline text-sm">Instagram</a></div></div>
+  <!-- FOOTER -->
+  <footer class="bg-[var(--black)] text-gray-300 py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-center md:text-left">
+      <div>
+        <img src="./IMG/logo.jfif" alt="logo" class="h-12 w-12 rounded-full mb-2 mx-auto md:mx-0 object-cover">
+        <p class="text-sm">Seguridad N.V — Instalación, venta y mantenimiento de equipos de seguridad electrónicos.</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-white">Contacto</h4>
+        <p class="text-sm mt-2">Tel: <a href="tel:7571341959" class="underline">757 134 1959</a></p>
+        <p class="text-sm">Correo: <a href="mailto:seguridadnv@gmail.com" class="underline">seguridadnv@gmail.com</a></p>
+        <p class="text-sm">Dirección: Calle M. Matamoros #46, Col. Centro, Tulcingo de Valle, Puebla.</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-white">Redes</h4>
+        <div class="flex justify-center md:justify-start gap-4 mt-3">
+          <a href="#" target="_blank">
+            <img src="./IMG/face.png" alt="Facebook" class="h-7 w-7 rounded-full hover:scale-110 transition transform shadow-lg hover:shadow-[0_0_10px_#1d4ed8]">
+          </a>
+          <a href="#" target="_blank">
+            <img src="./IMG/instagram.jpg" alt="Instagram" class="h-7 w-7 rounded-full hover:scale-110 transition transform shadow-lg hover:shadow-[0_0_10px_#dc2626]">
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="text-center text-xs text-gray-500 mt-6">&copy; 2025 Seguridad N.V.</div>
+    <div class="text-center text-xs text-gray-500 mt-6">&copy; 2025 SeguridadN.V. Todos los derechos reservados.</div>
   </footer>
+
+  <!-- 💚 Botón flotante WhatsApp -->
+  <a href="https://wa.me/5217571341959"
+     target="_blank"
+     aria-label="WhatsApp"
+     class="fixed right-5 bottom-5 bg-[#25D366] text-white rounded-full p-3 shadow-lg hover:bg-[#1ebe5d] hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center pulse">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="h-8 w-8">
+      <path d="M16.003 3C9.382 3 4 8.382 4 15.003c0 2.65.756 5.232 2.184 7.473L5 29l6.654-1.739A12.053 12.053 0 0 0 16.003 27C22.625 27 28 21.618 28 15.003 28 8.382 22.625 3 16.003 3zm5.671 17.17c-.233.654-1.352 1.24-1.85 1.316-.473.07-1.066.1-1.722-.107-.398-.127-.909-.295-1.556-.578-2.74-1.187-4.525-3.972-4.663-4.157-.136-.185-1.112-1.482-1.112-2.828s.705-2.01.955-2.29c.25-.28.546-.35.728-.35h.525c.169.008.398-.064.622.474.233.557.742 1.917.807 2.056.064.14.106.298.021.483-.085.184-.128.298-.25.46s-.26.3-.393.478c-.12.14-.248.292-.106.573.142.28.628 1.035 1.35 1.676.93.832 1.71 1.086 1.99 1.206.281.12.445.102.61-.06.165-.161.702-.818.89-1.097.188-.28.374-.233.622-.141.249.093 1.59.751 1.862.888.273.138.454.203.523.317.069.115.069.666-.164 1.32z"/>
+    </svg>
+  </a>
 
 </body>
 </html>
+
