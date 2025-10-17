@@ -141,7 +141,7 @@
   </footer>
 
   <!-- Botón flotante WhatsApp -->
-  <a href="https://wa.me/527571195641" target="_blank" aria-label="WhatsApp" class="fixed right-5 bottom-5 bg-[#25D366] text-white rounded-full p-3 shadow-lg hover:bg-[#1ebe5d] hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center pulse">
+  <a href="https://wa.me/527571341959" target="_blank" aria-label="WhatsApp" class="fixed right-5 bottom-5 bg-[#25D366] text-white rounded-full p-3 shadow-lg hover:bg-[#1ebe5d] hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center pulse">
     <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="h-8 w-8">
       <path d="M16.003 3C9.382 3 4 8.382 4 15.003c0 2.65.756 5.232 2.184 7.473L5 29l6.654-1.739A12.053 12.053 0 0 0 16.003 27C22.625 27 28 21.618 28 15.003 28 8.382 22.625 3 16.003 3zm5.671 17.17c-.233.654-1.352 1.24-1.85 1.316-.473.07-1.066.1-1.722-.107-.398-.127-.909-.295-1.556-.578-2.74-1.187-4.525-3.972-4.663-4.157-.136-.185-1.112-1.482-1.112-2.828s.705-2.01.955-2.29c.25-.28.546-.35.728-.35h.525c.169.008.398-.064.622.474.233.557.742 1.917.807 2.056.064.14.106.298.021.483-.085.184-.128.298-.25.46s-.26.3-.393.478c-.12.14-.248.292-.106.573.142.28.628 1.035 1.35 1.676.93.832 1.71 1.086 1.99 1.206.281.12.445.102.61-.06.165-.161.702-.818.89-1.097.188-.28.374-.233.622-.141.249.093 1.59.751 1.862.888.273.138.454.203.523.317.069.115.069.666-.164 1.32z"/>
     </svg>
@@ -157,8 +157,8 @@
       const telefono = document.getElementById('telefono').value.trim();
       const mensaje = document.getElementById('mensaje').value.trim();
 
-      const texto = `Hola, soy *${nombre}* 👋%0AMi correo es: ${correo}%0ATeléfono: ${telefono || 'No proporcionado'}%0A%0A${mensaje}`;
-      const numeroWhatsApp = '7571387650';
+      const texto = `Hola, soy *${nombre}* 👋 Mi correo es: ${correo}, Teléfono: ${telefono || 'No proporcionado'}, ${mensaje}`;
+      const numeroWhatsApp = '527571195641';
       const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURI(texto)}`;
 
       window.open(url, '_blank');
