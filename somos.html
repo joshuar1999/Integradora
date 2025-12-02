@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Seguridad N.V — Somos</title>
-  <meta name="description" content="Quiénes somos — Seguridad N.V. Misión, visión y valores.">
+  <title>SeguridadTecN.V — Somos</title>
+  <meta name="description" content="Quiénes somos — SeguridadTecN.V. Misión, visión y valores.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
@@ -16,7 +16,6 @@
       --gray:#f3f4f6;
     }
 
-    /* ✨ MENÚ BRILLANTE */
     .nav-link {
       position: relative;
       transition: all 0.3s ease;
@@ -35,12 +34,10 @@
     .nav-link:hover {
       color: white;
       text-shadow: 0 0 10px #ffffff, 0 0 20px #1d4ed8, 0 0 30px #1d4ed8;
-      filter: drop-shadow(0 0 8px #1d4ed8);
       transform: scale(1.05);
     }
     .nav-link:hover::after { width: 100%; }
 
-    /* 💚 ANIMACIÓN WHATSAPP */
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
       70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
@@ -48,31 +45,6 @@
     }
     .pulse { animation: pulse 3s infinite; }
 
-    /* 🎯 Flechas personalizadas del carrusel */
-    .custom-arrow {
-      background: white;
-      border: 2px solid var(--sky);
-      color: var(--sky);
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      transition: all .3s ease;
-    }
-    .custom-arrow:hover {
-      background: var(--blue);
-      color: white;
-      border-color: var(--blue);
-      transform: scale(1.1);
-    }
-    .swiper-button-prev { left: -55px !important; }
-    .swiper-button-next { right: -55px !important; }
-    .swiper-button-prev, .swiper-button-next {
-      top: 50% !important;
-      transform: translateY(-50%);
-    }
-
-    /* ✨ Brillo al pasar el cursor en tarjetas */
     .service-card {
       border: 2px solid transparent;
       transition: all 0.3s ease;
@@ -90,8 +62,8 @@
   <header class="fixed top-0 left-0 w-full bg-[var(--black)] shadow z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <img src="./IMG/logo.jfif" alt="Seguridad N.V logo" class="h-14 w-14 rounded-full object-cover">
-        <span class="font-bold text-xl text-white">SeguridadN.V</span>
+        <img src="./IMG/logo.jfif" alt="SeguridadTecN.V logo" class="h-14 w-14 rounded-full object-cover">
+        <span class="font-bold text-xl text-white">SeguridadTecN.V</span>
       </a>
 
       <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
@@ -103,7 +75,7 @@
       </nav>
 
       <div class="md:hidden">
-        <button id="mobileBtn" aria-label="Abrir menú" class="text-white" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="text-white">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -124,103 +96,121 @@
 
   <!-- MAIN -->
   <main class="pt-28">
+
     <!-- QUIÉNES SOMOS -->
     <section class="py-12 bg-[var(--gray)]">
       <div class="max-w-5xl mx-auto px-6 text-center md:text-left">
         <h1 class="text-4xl md:text-5xl font-extrabold text-[var(--blue)] mb-6">Quiénes Somos</h1>
-        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-          <strong>Seguridad N.V.</strong> es una empresa dedicada a la instalación, venta y mantenimiento de equipos de seguridad electrónicos.
-          Nuestra experiencia abarca proyectos residenciales, comerciales e industriales, ofreciendo soluciones integrales y personalizadas.
+
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
+          <strong>SeguridadTecN.V</strong> es una empresa dedicada a la instalación, venta y mantenimiento de equipos de seguridad electrónicos.
+          Nuestra experiencia abarca proyectos residenciales, comerciales e industriales.
         </p>
+
         <a href="servicios.html"
            class="inline-block mt-5 px-6 py-2.5 border-2 border-[var(--sky)] text-[var(--sky)] font-semibold rounded-full transition-all duration-300 hover:bg-[var(--sky)] hover:text-white hover:shadow-lg">
           Conoce más
         </a>
 
-        <!-- Misión / Visión / Valores -->
         <div class="mt-12 grid md:grid-cols-3 gap-6">
           <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
             <h2 class="text-2xl font-bold text-[var(--blue)] mb-2">Misión</h2>
-            <p class="text-gray-600">Brindar soluciones de seguridad electrónica integrales, con tecnología de calidad y servicio técnico calificado.</p>
+            <p class="text-gray-600 text-justify">
+              Brindar soluciones de seguridad electrónica con tecnología de calidad.
+            </p>
           </div>
+
           <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
             <h2 class="text-2xl font-bold text-[var(--blue)] mb-2">Visión</h2>
-            <p class="text-gray-600">Ser la empresa líder en la región mixteca de Tulcingo en sistemas de seguridad y comunicaciones innovadoras.</p>
+            <p class="text-gray-600 text-justify">
+              Ser la empresa líder en tecnología y seguridad en la región mixteca.
+            </p>
           </div>
+
           <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
             <h2 class="text-2xl font-bold text-[var(--blue)] mb-2">Valores</h2>
-            <ul class="list-disc list-inside text-gray-600">
-              <li>Profesionalismo</li><li>Compromiso</li><li>Transparencia</li><li>Innovación</li>
+            <ul class="list-disc list-inside text-gray-600 text-justify">
+              <li>Profesionalismo</li>
+              <li>Compromiso</li>
+              <li>Transparencia</li>
+              <li>Innovación</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CARRUSEL DE SERVICIOS -->
+    <!-- CARRUSEL CORREGIDO -->
     <section class="py-12 bg-white">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-2xl font-bold text-center text-[var(--blue)] mb-10">Nuestros principales servicios</h2>
 
-        <div class="relative">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
 
-              <!-- 1 -->
-              <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl hover:shadow-2xl p-8 text-center transform hover:-translate-y-2 transition-all duration-300">
-                <img src="./IMG/CAM1.jpeg" alt="CCTV" class="mx-auto h-28 mb-5 rounded-xl object-cover">
-                <h3 class="text-[var(--sky)] font-bold uppercase text-lg">Cámaras CCTV / Video Vigilancia</h3>
-                <p class="text-gray-600 text-sm mt-3">Instalación de cámaras análogas e IP con grabación, monitoreo remoto y analítica avanzada.</p>
-                <a href="servicios.html" class="inline-block mt-5 px-6 py-2 border-2 border-[var(--sky)] text-[var(--sky)] rounded-full font-semibold hover:bg-[var(--sky)] hover:text-white transition-all duration-300">Conoce más</a>
-              </div>
-
-              <!-- 2 -->
-              <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl hover:shadow-2xl p-8 text-center transform hover:-translate-y-2 transition-all duration-300">
-                <img src="./IMG/alarma.jpeg" alt="Alarmas" class="mx-auto h-28 mb-5 rounded-xl object-cover">
-                <h3 class="text-[var(--sky)] font-bold uppercase text-lg">Alarmas de Intrusión</h3>
-                <p class="text-gray-600 text-sm mt-3">Sistemas de alarma con sensores, paneles de control y mantenimiento preventivo.</p>
-                <a href="servicios.html" class="inline-block mt-5 px-6 py-2 border-2 border-[var(--sky)] text-[var(--sky)] rounded-full font-semibold hover:bg-[var(--sky)] hover:text-white transition-all duration-300">Conoce más</a>
-              </div>
-
-              <!-- 3 -->
-              <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl hover:shadow-2xl p-8 text-center transform hover:-translate-y-2 transition-all duration-300">
-                <img src="./IMG/incendio.jpeg" alt="Incendios" class="mx-auto h-28 mb-5 rounded-xl object-cover">
-                <h3 class="text-[var(--sky)] font-bold uppercase text-lg">Detectores de Incendios</h3>
-                <p class="text-gray-600 text-sm mt-3">Instalación de detectores, sirenas y sistemas contra incendios con mantenimiento regular.</p>
-                <a href="servicios.html" class="inline-block mt-5 px-6 py-2 border-2 border-[var(--sky)] text-[var(--sky)] rounded-full font-semibold hover:bg-[var(--sky)] hover:text-white transition-all duration-300">Conoce más</a>
-              </div>
-
-              <!-- 4 -->
-              <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl hover:shadow-2xl p-8 text-center transform hover:-translate-y-2 transition-all duration-300">
-                <img src="./IMG/radio5.jpeg" alt="Radio" class="mx-auto h-28 mb-5 rounded-xl object-cover">
-                <h3 class="text-[var(--sky)] font-bold uppercase text-lg">Radiocomunicación</h3>
-                <p class="text-gray-600 text-sm mt-3">Enlaces y equipos de radio profesionales para comunicación empresarial y seguridad.</p>
-                <a href="servicios.html" class="inline-block mt-5 px-6 py-2 border-2 border-[var(--sky)] text-[var(--sky)] rounded-full font-semibold hover:bg-[var(--sky)] hover:text-white transition-all duration-300">Conoce más</a>
-              </div>
-
-              <!-- 5 -->
-              <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl hover:shadow-2xl p-8 text-center transform hover:-translate-y-2 transition-all duration-300">
-                <img src="./IMG/Gps2.jpeg" alt="GPS" class="mx-auto h-28 mb-5 rounded-xl object-cover">
-                <h3 class="text-[var(--sky)] font-bold uppercase text-lg">GPS & Telemetría</h3>
-                <p class="text-gray-600 text-sm mt-3">Localización de activos y monitoreo de flotas en tiempo real con reportes automáticos.</p>
-                <a href="servicios.html" class="inline-block mt-5 px-6 py-2 border-2 border-[var(--sky)] text-[var(--sky)] rounded-full font-semibold hover:bg-[var(--sky)] hover:text-white transition-all duration-300">Conoce más</a>
-              </div>
-
-              <!-- 6 -->
-              <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl hover:shadow-2xl p-8 text-center transform hover:-translate-y-2 transition-all duration-300">
-                <img src="./IMG/PANELS.jpeg" alt="Paneles Solares" class="mx-auto h-28 mb-5 rounded-xl object-cover">
-                <h3 class="text-[var(--sky)] font-bold uppercase text-lg">Paneles Solares</h3>
-                <p class="text-gray-600 text-sm mt-3">Soluciones fotovoltaicas para mantener sistemas activos ante cortes de energía.</p>
-                <a href="servicios.html" class="inline-block mt-5 px-6 py-2 border-2 border-[var(--sky)] text-[var(--sky)] rounded-full font-semibold hover:bg-[var(--sky)] hover:text-white transition-all duration-300">Conoce más</a>
-              </div>
+            <!-- SERVICIO 1 -->
+            <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl p-8 text-center hover:-translate-y-2 transition">
+              <img src="./IMG/CAM1.jpeg" class="mx-auto h-36 mb-5 object-contain">
+              <h3 class="text-[var(--sky)] font-bold uppercase text-lg">Cámaras CCTV</h3>
+              <p class="text-gray-600 text-sm text-justify mt-3">
+                Instalación de cámaras análogas e IP con grabación y monitoreo remoto.
+              </p>
+              <a href="servicios.html" class="inline-block mt-5 px-5 py-2 rounded-full bg-[var(--blue)] text-white font-semibold hover:bg-blue-700 transition">Conocer más</a>
             </div>
 
-            <!-- FLECHAS -->
-            <div class="swiper-button-prev custom-arrow"></div>
-            <div class="swiper-button-next custom-arrow"></div>
+            <!-- SERVICIO 2 -->
+            <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl p-8 text-center hover:-translate-y-2 transition">
+              <img src="./IMG/alarma.jpeg" class="mx-auto h-36 mb-5 object-contain">
+              <h3 class="text-[var(--sky)] font-bold uppercase text-lg">Alarmas</h3>
+              <p class="text-gray-600 text-sm text-justify mt-3">
+                Sistemas de sensores, paneles de control y notificaciones móviles.
+              </p>
+              <a href="servicios.html" class="inline-block mt-5 px-5 py-2 rounded-full bg-[var(--blue)] text-white font-semibold hover:bg-blue-700 transition">Conocer más</a>
+            </div>
 
-            <div class="swiper-pagination mt-6"></div>
+            <!-- SERVICIO 3 -->
+            <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl p-8 text-center hover:-translate-y-2 transition">
+              <img src="./IMG/incendio.jpeg" class="mx-auto h-36 mb-5 object-contain">
+              <h3 class="text-[var(--sky)] font-bold uppercase text-lg">Incendios</h3>
+              <p class="text-gray-600 text-sm text-justify mt-3">
+                Instalación de detectores, alarmas y sistemas contra incendios.
+              </p>
+              <a href="servicios.html" class="inline-block mt-5 px-5 py-2 rounded-full bg-[var(--blue)] text-white font-semibold hover:bg-blue-700 transition">Conocer más</a>
+            </div>
+
+            <!-- SERVICIO 4 -->
+            <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl p-8 text-center hover:-translate-y-2 transition">
+              <img src="./IMG/radio5.jpeg" class="mx-auto h-36 mb-5 object-contain">
+              <h3 class="text-[var(--sky)] font-bold uppercase text-lg">Radiocomunicación</h3>
+              <p class="text-gray-600 text-sm text-justify mt-3">
+                Radios profesionales, enlaces y soluciones de comunicación.
+              </p>
+              <a href="servicios.html" class="inline-block mt-5 px-5 py-2 rounded-full bg-[var(--blue)] text-white font-semibold hover:bg-blue-700 transition">Conocer más</a>
+            </div>
+
+            <!-- SERVICIO 5 -->
+            <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl p-8 text-center hover:-translate-y-2 transition">
+              <img src="./IMG/Gps2.jpeg" class="mx-auto h-36 mb-5 object-contain">
+              <h3 class="text-[var(--sky)] font-bold uppercase text-lg">GPS & Telemetría</h3>
+              <p class="text-gray-600 text-sm text-justify mt-3">
+                Monitoreo en tiempo real, geocercas y reportes inteligentes.
+              </p>
+              <a href="servicios.html" class="inline-block mt-5 px-5 py-2 rounded-full bg-[var(--blue)] text-white font-semibold hover:bg-blue-700 transition">Conocer más</a>
+            </div>
+
+            <!-- SERVICIO 6 -->
+            <div class="swiper-slide service-card bg-white rounded-3xl shadow-xl p-8 text-center hover:-translate-y-2 transition">
+              <img src="./IMG/PANELS.jpeg" class="mx-auto h-36 mb-5 object-contain">
+              <h3 class="text-[var(--sky)] font-bold uppercase text-lg">Paneles Solares</h3>
+              <p class="text-gray-600 text-sm text-justify mt-3">
+                Sistemas solares para respaldo y ahorro energético.
+              </p>
+              <a href="servicios.html" class="inline-block mt-5 px-5 py-2 rounded-full bg-[var(--blue)] text-white font-semibold hover:bg-blue-700 transition">Conocer más</a>
+            </div>
+
           </div>
+
+          <div class="swiper-pagination mt-6"></div>
         </div>
       </div>
     </section>
@@ -231,51 +221,68 @@
     <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-center md:text-left">
       <div>
         <img src="./IMG/logo.jfif" alt="logo" class="h-12 w-12 rounded-full mb-2 mx-auto md:mx-0 object-cover">
-        <p class="text-sm">SeguridadN.V — Instalación, venta y mantenimiento de equipos de seguridad electrónicos.</p>
+        <p class="text-sm">SeguridadTecN.V — Instalación, venta y mantenimiento de equipos de seguridad electrónicos.</p>
       </div>
+
       <div>
         <h4 class="font-semibold text-white">Contacto</h4>
         <p class="text-sm mt-2">Tel: <a href="tel:7571341959" class="underline">757 134 1959</a></p>
         <p class="text-sm">Correo: <a href="mailto:seguridadnv@gmail.com" class="underline">seguridadnv@gmail.com</a></p>
         <p class="text-sm">Calle M. Matamoros #46, Col. Centro, Tulcingo de Valle, Puebla.</p>
       </div>
+
       <div>
-        <h4 class="font-semibold text-white">Redes</h4>
-        <div class="flex justify-center md:justify-start gap-4 mt-3">
-          <img src="./IMG/face.png" class="h-7 w-7 rounded-full hover:scale-110 transition transform shadow-lg hover:shadow-[0_0_10px_#1d4ed8]" alt="">
-          <img src="./IMG/instagram.jpg" class="h-7 w-7 rounded-full hover:scale-110 transition transform shadow-lg hover:shadow-[0_0_10px_#dc2626]" alt="">
+        <h4 class="font-semibold text-white">Redes sociales</h4>
+        <div class="flex gap-4 mt-3">
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=100090006570251" target="_blank"
+             class="hover:scale-110 transition">
+            <img src="./IMG/face.png"
+                 class="h-9 w-9 rounded-full shadow hover:shadow-[0_0_10px_#1d4ed8]"
+                 alt="Facebook SeguridadTecN.V">
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/anibalneri" target="_blank"
+             class="hover:scale-110 transition">
+            <img src="./IMG/instagram.jpg"
+                 class="h-9 w-9 rounded-full shadow hover:shadow-[0_0_10px_#d62976]"
+                 alt="Instagram SeguridadTecN.V">
+          </a>
+
         </div>
       </div>
+
     </div>
-    <div class="text-center text-xs text-gray-500 mt-6">&copy; 2025 Seguridad N.V. Todos los derechos reservados.</div>
+
+    <div class="text-center text-xs text-gray-500 mt-6">&copy; 2025 SeguridadTecN.V. Todos los derechos reservados.</div>
   </footer>
 
-  <!-- 💚 Botón flotante WhatsApp -->
-  <a href="https://wa.me/5217571341959"
-     target="_blank"
-     aria-label="WhatsApp"
-     class="fixed right-5 bottom-5 bg-[#25D366] text-white rounded-full p-3 shadow-lg hover:bg-[#1ebe5d] hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center pulse">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/5217571341959" target="_blank"
+     class="fixed right-5 bottom-5 bg-[#25D366] text-white rounded-full p-3 shadow-lg pulse">
     <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="h-8 w-8">
       <path d="M16.003 3C9.382 3 4 8.382 4 15.003c0 2.65.756 5.232 2.184 7.473L5 29l6.654-1.739A12.053 12.053 0 0 0 16.003 27C22.625 27 28 21.618 28 15.003 28 8.382 22.625 3 16.003 3zm5.671 17.17c-.233.654-1.352 1.24-1.85 1.316-.473.07-1.066.1-1.722-.107-.398-.127-.909-.295-1.556-.578-2.74-1.187-4.525-3.972-4.663-4.157-.136-.185-1.112-1.482-1.112-2.828s.705-2.01.955-2.29c.25-.28.546-.35.728-.35h.525c.169.008.398-.064.622.474.233.557.742 1.917.807 2.056.064.14.106.298.021.483-.085.184-.128.298-.25.46s-.26.3-.393.478c-.12.14-.248.292-.106.573.142.28.628 1.035 1.35 1.676.93.832 1.71 1.086 1.99 1.206.281.12.445.102.61-.06.165-.161.702-.818.89-1.097.188-.28.374-.233.622-.141.249.093 1.59.751 1.862.888.273.138.454.203.523.317.069.115.069.666-.164 1.32z"/>
     </svg>
   </a>
 
-  <!-- SWIPER JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     new Swiper(".mySwiper", {
       slidesPerView: 1,
       spaceBetween: 30,
       pagination: { el: ".swiper-pagination", clickable: true },
-      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
       breakpoints: {
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 }
       }
     });
   </script>
+
 </body>
 </html>
+
 
 
 

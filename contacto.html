@@ -3,167 +3,225 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Seguridad N.V — Contacto</title>
+  <title>SeguridadTecN.V — Contacto</title>
   <meta name="description" content="Contáctanos — Seguridad N.V. Instalación, venta y mantenimiento de equipos de seguridad electrónica.">
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     :root {
       --blue:#1d4ed8;
-      --red:#dc2626;
       --black:#000000;
       --gray:#f3f4f6;
     }
+    /* Efecto menú */
     .nav-link {
       position: relative;
-      transition: all 0.3s ease;
+      transition: .3s;
     }
     .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0%;
-      height: 2px;
-      background: white;
-      transition: width 0.3s ease;
-      box-shadow: 0 0 10px white;
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:0%;
+      height:2px;
+      background:white;
+      transition:.3s;
+      box-shadow:0 0 10px white;
     }
+    .nav-link:hover::after { width:100%; }
     .nav-link:hover {
-      color: white;
-      text-shadow: 0 0 10px #ffffff, 0 0 20px #1d4ed8, 0 0 30px #1d4ed8;
-      transform: scale(1.05);
+      transform:scale(1.05);
+      filter:drop-shadow(0 0 8px var(--blue));
     }
-    .nav-link:hover::after { width: 100%; }
-
+    /* Efecto pulso WhatsApp */
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
-      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
-      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+      0% { box-shadow:0 0 0 0 rgba(37,211,102,.6); }
+      70% { box-shadow:0 0 0 15px rgba(37,211,102,0); }
+      100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
     }
-    .pulse { animation: pulse 3s infinite; }
+    .pulse { animation:pulse 3s infinite; }
   </style>
 </head>
 
 <body class="antialiased bg-gray-50 text-gray-800">
 
-  <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 w-full bg-[var(--black)] shadow z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="./IMG/logo.jfif" alt="Seguridad N.V logo" class="h-14 w-14 rounded-full object-cover">
-        <span class="font-bold text-xl text-white">SeguridadN.V</span>
-      </a>
-      <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
-        <a href="index.html" class="nav-link text-white">Inicio</a>
-        <a href="somos.html" class="nav-link text-white">Somos</a>
-        <a href="servicios.html" class="nav-link text-white">Servicios</a>
-        <a href="blog.html" class="nav-link text-white">Blog</a>
-        <a href="contacto.html" class="nav-link text-[var(--blue)] font-bold">Contacto</a>
-      </nav>
-      <div class="md:hidden">
-        <button id="mobileBtn" aria-label="Abrir menú" class="text-white" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full bg-[var(--black)] shadow z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="./IMG/logo.jfif" alt="logo" class="h-14 w-14 rounded-full object-cover">
+      <span class="font-bold text-xl text-white">SeguridadTecN.V</span>
+    </a>
+
+    <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
+      <a href="index.html" class="nav-link text-white">Inicio</a>
+      <a href="somos.html" class="nav-link text-white">Somos</a>
+      <a href="servicios.html" class="nav-link text-white">Servicios</a>
+      <a href="blog.html" class="nav-link text-white">Blog</a>
+      <a href="contacto.html" class="nav-link text-[var(--blue)] font-bold">Contacto</a>
+    </nav>
+
+    <div class="md:hidden">
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden bg-[var(--black)] border-t border-gray-700 shadow">
+    <nav class="flex flex-col px-6 py-4 gap-2 text-white">
+      <a href="index.html">Inicio</a>
+      <a href="somos.html">Somos</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html" class="text-[var(--blue)] font-semibold">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="pt-28">
+<section class="py-12 bg-[var(--gray)]">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <h1 class="text-4xl font-extrabold text-[var(--blue)] mb-2">Contáctanos</h1>
+    <p class="text-gray-700 mb-8 text-lg text-justify">
+      Estamos disponibles para cualquier instalación, mantenimiento o cotización de equipos de seguridad.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- DATOS -->
+      <div>
+        <h3 class="text-2xl font-bold text-[var(--blue)] mb-2">Datos de contacto</h3>
+
+        <p class="mb-3">📞 Tel: 
+          <a href="tel:7571341959" class="underline text-[var(--black)]">757 134 1959</a>
+        </p>
+
+        <p class="mb-3">📍 Dirección:  
+          Calle M. Matamoros #46, Col. Centro, Tulcingo de Valle, Puebla.
+        </p>
+
+        <p class="mb-3">🕐 Horario:  
+          Lunes a Viernes 9:00 a 18:00 hrs
+        </p>
+
+        <p class="mb-6">✉️ Correo:  
+          <a href="mailto:seguridadnv@gmail.com" class="underline">seguridadnv@gmail.com</a>
+        </p>
+
+        <iframe 
+          src="https://www.google.com/maps?q=Calle+M.+Matamoros+46,+Tulcingo+de+Valle,+Puebla&output=embed" 
+          class="w-full h-56 rounded-lg border-0 shadow-lg"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- FORM -->
+      <div>
+        <h3 class="text-2xl font-bold text-[var(--blue)] mb-4">Envíanos un mensaje por WhatsApp</h3>
+
+        <form id="whatsappForm" class="bg-white p-6 rounded-xl shadow-lg grid gap-4">
+
+          <input id="nombre" required placeholder="Tu nombre"
+            class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none">
+
+          <input id="correo" type="email" placeholder="Tu correo (opcional)"
+            class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none">
+
+          <input id="telefono" placeholder="Teléfono"
+            class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none">
+
+          <textarea id="mensaje" required placeholder="Escribe tu mensaje aquí..." rows="6"
+            class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none"></textarea>
+
+          <!-- BOTÓN MÁS CORTO -->
+          <button type="submit"
+            class="px-4 py-3 bg-[var(--blue)] text-white font-semibold rounded-md hover:bg-blue-700 transition w-52 mx-auto">
+            Enviar por WhatsApp
+          </button>
+        </form>
+
       </div>
     </div>
 
-    <div id="mobileMenu" class="hidden md:hidden bg-[var(--black)] border-t border-gray-700 shadow">
-      <nav class="flex flex-col px-6 py-4 gap-2 text-white">
-        <a href="index.html">Inicio</a>
-        <a href="somos.html">Somos</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="blog.html">Blog</a>
-        <a href="contacto.html" class="text-[var(--blue)] font-semibold">Contacto</a>
-      </nav>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-[var(--black)] text-gray-300 py-8 mt-12">
+  <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-center md:text-left">
+
+    <div>
+      <img src="./IMG/logo.jfif" class="h-12 w-12 rounded-full mb-2 mx-auto md:mx-0 object-cover">
+      <p class="text-sm">SeguridadTecN.V — Instalación, venta y mantenimiento de equipos de seguridad electrónicos.</p>
     </div>
-  </header>
 
-  <!-- CONTENIDO -->
-  <main class="pt-28">
-    <section class="py-12 bg-[var(--gray)]">
-      <div class="max-w-5xl mx-auto px-6">
-        <h1 class="text-4xl font-extrabold text-[var(--blue)] mb-2">Contáctanos</h1>
-        <p class="text-gray-700 mb-8 text-lg">Estamos disponibles para asesorarte en instalación, mantenimiento o cotización de equipos de seguridad.</p>
-
-        <div class="grid md:grid-cols-2 gap-10">
-
-          <!-- INFORMACIÓN -->
-          <div>
-            <h3 class="text-2xl font-bold text-[var(--blue)] mb-2">Datos de contacto</h3>
-            <p class="mb-3">📞 Tel: <a href="tel:7571341959" class="underline text-[var(--black)]">757 134 1959</a></p>
-            <p class="mb-3">📍 Dirección: Calle M. Matamoros #46, Col. Centro, Tulcingo de Valle, Puebla.</p>
-            <p class="mb-3">🕐 Horario: Lunes a Viernes 9:00 a 18:00 hrs</p>
-            <p class="mb-6">✉️ Correo: <a href="mailto:seguridadnv@gmail.com" class="underline">seguridadnv@gmail.com</a></p>
-            <iframe src="https://www.google.com/maps?q=Calle+M.+Matamoros+46,+Tulcingo+de+Valle,+Puebla&output=embed" class="w-full h-56 rounded-lg border-0 shadow-lg" loading="lazy"></iframe>
-          </div>
-
-          <!-- FORMULARIO -->
-          <div>
-            <h3 class="text-2xl font-bold text-[var(--blue)] mb-4">Envíanos un mensaje por WhatsApp</h3>
-            <form id="whatsappForm" class="bg-white p-6 rounded-xl shadow-lg grid gap-4">
-              <input id="nombre" required placeholder="Tu nombre" class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none transition">
-              <input id="correo" type="email" required placeholder="Tu correo electrónico" class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none transition">
-              <input id="telefono" placeholder="Teléfono (opcional)" class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none transition">
-              <textarea id="mensaje" required placeholder="Escribe tu mensaje aquí..." rows="6" class="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[var(--blue)] outline-none transition"></textarea>
-
-              <button type="submit" class="px-4 py-3 bg-[var(--blue)] text-white font-semibold rounded-md hover:bg-blue-700 transition">Enviar por WhatsApp</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-[var(--black)] text-gray-300 py-8 mt-12">
-    <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-center md:text-left">
-      <div>
-        <img src="./IMG/logo.jfif" alt="logo" class="h-12 w-12 rounded-full mb-2 mx-auto md:mx-0 object-cover">
-        <p class="text-sm">Seguridad N.V — Instalación, venta y mantenimiento de equipos de seguridad electrónicos.</p>
-      </div>
-      <div>
-        <h4 class="font-semibold text-white">Contacto</h4>
-        <p class="text-sm mt-2">Tel: <a href="tel:7571341959" class="underline">757 134 1959</a></p>
-        <p class="text-sm">Correo: <a href="mailto:seguridadnv@gmail.com" class="underline">seguridadnv@gmail.com</a></p>
-        <p class="text-sm">Dirección: Calle M. Matamoros #46, Col. Centro, Tulcingo de Valle, Puebla.</p>
-      </div>
-      <div>
-        <h4 class="font-semibold text-white">Redes</h4>
-        <div class="flex justify-center md:justify-start gap-4 mt-3">
-          <a href="#" target="_blank"><img src="./IMG/face.png" alt="Facebook" class="h-7 w-7 rounded-full hover:scale-110 transition transform shadow-lg hover:shadow-[0_0_10px_#1d4ed8]"></a>
-          <a href="#" target="_blank"><img src="./IMG/instagram.jpg" alt="Instagram" class="h-7 w-7 rounded-full hover:scale-110 transition transform shadow-lg hover:shadow-[0_0_10px_#dc2626]"></a>
-        </div>
-      </div>
+    <div>
+      <h4 class="font-semibold text-white">Contacto</h4>
+      <p class="text-sm mt-2">Tel: <a href="tel:7571341959" class="underline">757 134 1959</a></p>
+      <p class="text-sm">Correo: <a href="mailto:seguridadnv@gmail.com" class="underline">seguridadnv@gmail.com</a></p>
+      <p class="text-sm">Dirección: Calle M. Matamoros #46, Col. Centro, Tulcingo de Valle, Puebla.</p>
     </div>
-    <div class="text-center text-xs text-gray-500 mt-6">&copy; 2025 SeguridadN.V. Todos los derechos reservados.</div>
-  </footer>
 
-  <!-- Botón flotante WhatsApp -->
-  <a href="https://wa.me/527571341959" target="_blank" aria-label="WhatsApp" class="fixed right-5 bottom-5 bg-[#25D366] text-white rounded-full p-3 shadow-lg hover:bg-[#1ebe5d] hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center pulse">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="h-8 w-8">
-      <path d="M16.003 3C9.382 3 4 8.382 4 15.003c0 2.65.756 5.232 2.184 7.473L5 29l6.654-1.739A12.053 12.053 0 0 0 16.003 27C22.625 27 28 21.618 28 15.003 28 8.382 22.625 3 16.003 3zm5.671 17.17c-.233.654-1.352 1.24-1.85 1.316-.473.07-1.066.1-1.722-.107-.398-.127-.909-.295-1.556-.578-2.74-1.187-4.525-3.972-4.663-4.157-.136-.185-1.112-1.482-1.112-2.828s.705-2.01.955-2.29c.25-.28.546-.35.728-.35h.525c.169.008.398-.064.622.474.233.557.742 1.917.807 2.056.064.14.106.298.021.483-.085.184-.128.298-.25.46s-.26.3-.393.478c-.12.14-.248.292-.106.573.142.28.628 1.035 1.35 1.676.93.832 1.71 1.086 1.99 1.206.281.12.445.102.61-.06.165-.161.702-.818.89-1.097.188-.28.374-.233.622-.141.249.093 1.59.751 1.862.888.273.138.454.203.523.317.069.115.069.666-.164 1.32z"/>
-    </svg>
-  </a>
+  <div>
+  <h4 class="font-semibold text-white">Redes sociales</h4>
+  <div class="flex gap-4 mt-3">
 
-  <!-- SCRIPT para enviar datos a WhatsApp -->
-  <script>
-    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100090006570251" target="_blank"
+       class="hover:scale-110 transition">
+      <img src="./IMG/face.png"
+        class="h-9 w-9 rounded-full shadow hover:shadow-[0_0_10px_#1d4ed8]"
+        alt="Facebook SeguridadTecN.V">
+    </a>
 
-      const nombre = document.getElementById('nombre').value.trim();
-      const correo = document.getElementById('correo').value.trim();
-      const telefono = document.getElementById('telefono').value.trim();
-      const mensaje = document.getElementById('mensaje').value.trim();
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/anibalneri" target="_blank"
+       class="hover:scale-110 transition">
+      <img src="./IMG/instagram.jpg"
+        class="h-9 w-9 rounded-full shadow hover:shadow-[0_0_10px_#d62976]"
+        alt="Instagram SeguridadTecN.V">
+    </a>
 
-      const texto = `Hola, soy *${nombre}* 👋 Mi correo es: ${correo}, Teléfono: ${telefono || 'No proporcionado'}, ${mensaje}`;
-      const numeroWhatsApp = '527571195641';
-      const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURI(texto)}`;
+  </div>
+</div>
 
-      window.open(url, '_blank');
-    });
-  </script>
+
+  </div>
+
+  <p class="text-center text-xs text-gray-500 mt-6">© 2025 SeguridadTecN.V. Todos los derechos reservados.</p>
+</footer>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/527571341959" target="_blank"
+   class="fixed right-5 bottom-5 bg-[#25D366] text-white rounded-full p-3 shadow-lg hover:bg-[#1ebe5d] pulse">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="h-8 w-8">
+    <path d="M16.003 3C9.382 3 4 8.382 4 15.003c0 2.65.756 5.232 2.184 7.473L5 29l6.654-1.739A12.053 12.053 0 0 0 16.003 27C22.625 27 28 21.618 28 15.003 28 8.382 22.625 3 16.003 3zm5.671 17.17c-.233.654-1.352 1.24-1.85 1.316-.473.07-1.066.1-1.722-.107-.398-.127-.909-.295-1.556-.578-2.74-1.187-4.525-3.972-4.663-4.157-.136-.185-1.112-1.482-1.112-2.828s.705-2.01.955-2.29c.25-.28.546-.35.728-.35h.525c.169.008.398-.064.622.474.233.557.742 1.917.807 2.056.064.14.106.298.021.483-.085.184-.128.298-.25.46s-.26.3-.393.478c-.12.14-.248.292-.106.573.142.28.628 1.035 1.35 1.676.93.832 1.71 1.086 1.99 1.206.281.12.445.102.61-.06.165-.161.702-.818.89-1.097.188-.28.374-.233.622-.141.249.093 1.59.751 1.862.888.273.138.454.203.523.317.069.115.069.666-.164 1.32z"/>
+  </svg>
+</a>
+
+<!-- SCRIPT FORMULARIO -->
+<script>
+document.getElementById('whatsappForm').addEventListener('submit', (e)=>{
+  e.preventDefault();
+
+  let nombre = document.getElementById('nombre').value;
+  let correo = document.getElementById('correo').value;
+  let tel = document.getElementById('telefono').value;
+  let mensaje = document.getElementById('mensaje').value;
+
+  let text = `Hola, soy ${nombre}. Mi correo: ${correo || 'No proporcionado'}. Tel: ${tel || 'No proporcionado'}. Mensaje: ${mensaje}`;
+
+  window.open(`https://wa.me/527571341959?text=${encodeURI(text)}`, "_blank");
+});
+</script>
 
 </body>
 </html>
+

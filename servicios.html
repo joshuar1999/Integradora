@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Seguridad N.V — Servicios</title>
-  <meta name="description" content="Servicios Seguridad N.V.: CCTV, alarmas, radiocomunicación, GPS, paneles solares, detectores de incendios, cercas eléctricas, portones y más.">
+  <title>SeguridadTecN.V — Servicios</title>
+  <meta name="description" content="Servicios SeguridadTecN.V: CCTV, alarmas, radiocomunicación, GPS, paneles solares, detectores de incendios, cercas eléctricas y más.">
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     :root {
       --blue:#1d4ed8;
-      --red:#dc2626;
+      --sky:#00AEEF;
       --black:#000000;
       --gray:#f3f4f6;
     }
 
-    /* ✨ Menú brillante */
+    /* NAVBAR EFECTO */
     .nav-link {
       position: relative;
       transition: all 0.3s ease;
@@ -32,13 +33,13 @@
     }
     .nav-link:hover {
       color: white;
-      text-shadow: 0 0 10px #ffffff, 0 0 20px #1d4ed8, 0 0 30px #1d4ed8;
+      text-shadow: 0 0 10px #fff, 0 0 20px #1d4ed8;
       filter: drop-shadow(0 0 8px #1d4ed8);
       transform: scale(1.05);
     }
     .nav-link:hover::after { width: 100%; }
 
-    /* 💚 Efecto pulso para WhatsApp */
+    /* ANIMACIÓN WSP */
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
       70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
@@ -46,7 +47,7 @@
     }
     .pulse { animation: pulse 3s infinite; }
 
-    /* 🔁 Animación del slider */
+    /* ANIMACIÓN MARCAS */
     @keyframes scroll {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
@@ -56,243 +57,278 @@
     }
   </style>
 </head>
+
 <body class="antialiased bg-gray-50 text-gray-800">
 
-  <!-- NAVBAR NEGRO -->
-  <header class="fixed top-0 left-0 w-full bg-[var(--black)] shadow z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="./IMG/logo.jfif" alt="Seguridad N.V logo" class="h-14 w-14 rounded-full object-cover">
-        <span class="font-bold text-xl text-white">SeguridadN.V</span>
-      </a>
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full bg-[var(--black)] shadow z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="./IMG/logo.jfif" alt="Seguridad logo" class="h-14 w-14 rounded-full object-cover">
+      <span class="font-bold text-xl text-white">SeguridadTecN.V</span>
+    </a>
 
-      <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
-        <a href="index.html" class="nav-link text-white">Inicio</a>
-        <a href="somos.html" class="nav-link text-white">Somos</a>
-        <a href="servicios.html" class="nav-link text-[var(--blue)] font-bold">Servicios</a>
-        <a href="blog.html" class="nav-link text-white">Blog</a>
-        <a href="contacto.html" class="nav-link text-white">Contacto</a>
-      </nav>
+    <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
+      <a href="index.html" class="nav-link text-white">Inicio</a>
+      <a href="somos.html" class="nav-link text-white">Somos</a>
+      <a href="servicios.html" class="nav-link text-[var(--blue)] font-bold">Servicios</a>
+      <a href="blog.html" class="nav-link text-white">Blog</a>
+      <a href="contacto.html" class="nav-link text-white">Contacto</a>
+    </nav>
 
-      <!-- Botón hamburguesa -->
-      <div class="md:hidden">
-        <button id="mobileBtn" aria-label="Abrir menú" class="text-white" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
+    <div class="md:hidden">
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
+  </div>
 
-    <!-- Menú móvil -->
-    <div id="mobileMenu" class="hidden md:hidden bg-[var(--black)] border-t border-gray-700 shadow">
-      <nav class="flex flex-col px-6 py-4 gap-2 text-white">
-        <a href="index.html">Inicio</a>
-        <a href="somos.html">Somos</a>
-        <a href="servicios.html" class="text-[var(--blue)] font-semibold">Servicios</a>
-        <a href="blog.html">Blog</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
+  <div id="mobileMenu" class="hidden md:hidden bg-[var(--black)] border-t border-gray-700 shadow">
+    <nav class="flex flex-col px-6 py-4 gap-2 text-white">
+      <a href="index.html">Inicio</a>
+      <a href="somos.html">Somos</a>
+      <a href="servicios.html" class="text-[var(--blue)] font-semibold">Servicios</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- MAIN -->
-  <main class="pt-28">
-    <section class="py-12 bg-[var(--gray)]">
-      <div class="max-w-6xl mx-auto px-6">
-        <h1 class="text-4xl font-extrabold text-[var(--blue)] mb-4">Nuestros Servicios</h1>
-        <p class="text-gray-700 mb-8 text-lg">Ofrecemos una amplia gama de servicios en seguridad electrónica, energía y comunicaciones.</p>
+<!-- MAIN -->
+<main class="pt-28">
 
-        <!-- Tarjetas de servicios -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<section class="py-12 bg-[var(--gray)]">
+  <div class="max-w-6xl mx-auto px-6">
 
-          <!-- 👇 Agregados precios y botones -->
-          <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-            <img src="./IMG/CAM1.jpeg" alt="CCTV" class="rounded-lg mb-3 w-full h-40 object-cover">
-            <h3 class="font-semibold text-lg text-[var(--black)]">Cámaras CCTV / Video Vigilancia</h3>
-            <p class="mt-2 text-gray-600">Instalación de cámaras análogas y IP, grabación NVR, visualización remota y analítica.</p>
-            <p class="mt-2 font-semibold text-[var(--blue)]">Desde $1,200 MXN</p>
-            <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20Cámaras%20CCTV" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebe5d] transition">💬 Cotizar por WhatsApp</a>
-          </div>
+    <h1 class="text-4xl font-extrabold text-[var(--blue)] mb-4">Nuestros Servicios</h1>
+    <p class="text-gray-700 mb-8 text-lg text-justify">
+      Ofrecemos una amplia gama de servicios en seguridad electrónica, energía y comunicaciones.
+    </p>
 
-          <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-            <img src="./IMG/alarma.jpeg" alt="Alarmas" class="rounded-lg mb-3 w-full h-40 object-cover">
-            <h3 class="font-semibold text-lg text-[var(--black)]">Alarmas de Intrusión</h3>
-            <p class="mt-2 text-gray-600">Sistemas con sensores, paneles de control, monitoreo y mantenimientos programados.</p>
-            <p class="mt-2 font-semibold text-[var(--blue)]">Desde $2,800 MXN</p>
-            <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20una%20alarma%20de%20intrusión" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebe5d] transition">💬 Cotizar por WhatsApp</a>
-          </div>
+    <!-- GRID DE SERVICIOS -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-            <img src="./IMG/incend.jpeg" alt="Detectores de incendios" class="rounded-lg mb-3 w-full h-40 object-cover">
-            <h3 class="font-semibold text-lg text-[var(--black)]">Detectores de Incendios</h3>
-            <p class="mt-2 text-gray-600">Detectores, sirenas, integración con sistemas de alarma y mantenimiento.</p>
-            <p class="mt-2 font-semibold text-[var(--blue)]">Desde $1,900 MXN</p>
-            <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20detectores%20de%20incendio" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebe5d] transition">💬 Cotizar por WhatsApp</a>
-          </div>
-
-          <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-            <img src="./IMG/ANTENAOMN.jpeg" alt="Radiocomunicación" class="rounded-lg mb-3 w-full h-40 object-cover">
-            <h3 class="font-semibold text-lg text-[var(--black)]">Radiocomunicación</h3>
-            <p class="mt-2 text-gray-600">Enlaces, radios profesionales, repetidores y soluciones de cobertura.</p>
-            <p class="mt-2 font-semibold text-[var(--blue)]">Desde $2,500 MXN</p>
-            <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20servicio%20de%20radiocomunicación" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebe5d] transition">💬 Cotizar por WhatsApp</a>
-          </div>
-
-          <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-            <img src="./IMG/GPS.jpeg" alt="GPS y Telemetría" class="rounded-lg mb-3 w-full h-40 object-cover">
-            <h3 class="font-semibold text-lg text-[var(--black)]">GPS & Telemetría</h3>
-            <p class="mt-2 text-gray-600">Localización de activos, reportes en tiempo real y soluciones telemétricas.</p>
-            <p class="mt-2 font-semibold text-[var(--blue)]">Desde $1,800 MXN</p>
-            <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20GPS" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebe5d] transition">💬 Cotizar por WhatsApp</a>
-          </div>
-
-          <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-            <img src="./IMG/panelessl.jpeg" alt="Paneles Solares" class="rounded-lg mb-3 w-full h-40 object-cover">
-            <h3 class="font-semibold text-lg text-[var(--black)]">Paneles Solares</h3>
-            <p class="mt-2 text-gray-600">Soluciones para alimentar equipos críticos y asegurar continuidad de servicio.</p>
-            <p class="mt-2 font-semibold text-[var(--blue)]">Desde $3,500 MXN</p>
-            <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20un%20sistema%20de%20paneles%20solares" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebe5d] transition">💬 Cotizar por WhatsApp</a>
-          </div>
-
-          <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-            <img src="./IMG/CABLE.jpeg" alt="Cableado y Pararrayos" class="rounded-lg mb-3 w-full h-40 object-cover">
-            <h3 class="font-semibold text-lg text-[var(--black)]">Cableado Estructurado & Pararrayos</h3>
-            <p class="mt-2 text-gray-600">Infraestructura, canalizaciones y protección para instalaciones.</p>
-            <p class="mt-2 font-semibold text-[var(--blue)]">Desde $2,200 MXN</p>
-            <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20cableado%20estructurado" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebe5d] transition">💬 Cotizar por WhatsApp</a>
-          </div>
-
-          <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-            <img src="./IMG/cerco2.jpeg" alt="Cercas y portones" class="rounded-lg mb-3 w-full h-40 object-cover">
-            <h3 class="font-semibold text-lg text-[var(--black)]">Cercas Eléctricas & Portones</h3>
-            <p class="mt-2 text-gray-600">Sistemas perimetrales y automatización para control de accesos.</p>
-            <p class="mt-2 font-semibold text-[var(--blue)]">Desde $3,000 MXN</p>
-            <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20una%20cerca%20eléctrica%20o%20portón%20automático" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebe5d] transition">💬 Cotizar por WhatsApp</a>
-          </div>
-
-          <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-            <img src="./IMG/AUFIT.jpeg" alt="Aire acondicionado" class="rounded-lg mb-3 w-full h-40 object-cover">
-            <h3 class="font-semibold text-lg text-[var(--black)]">Aire Acondicionado</h3>
-            <p class="mt-2 text-gray-600">Suministro e instalación para cuartos de equipos y oficinas.</p>
-            <p class="mt-2 font-semibold text-[var(--blue)]">Desde $4,000 MXN</p>
-            <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20aire%20acondicionado" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#1ebe5d] transition">💬 Cotizar por WhatsApp</a>
-          </div>
+      <!-- 🔵 TARJETA 1 -->
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="./IMG/CAM1.jpeg" class="max-h-full max-w-full object-contain p-2">
         </div>
-
-        <p class="mt-6 text-center text-sm text-gray-500">
-          ¿Quieres cotizar alguno de estos servicios? Contáctanos por WhatsApp o teléfono.
-        </p>
+        <h3 class="font-semibold text-lg mt-3">Cámaras CCTV / Video Vigilancia</h3>
+        <p class="mt-2 text-gray-600 text-justify">Instalación de cámaras análogas y IP, grabación NVR, visualización remota y analítica avanzada.</p>
+        <p class="mt-2 font-semibold text-[var(--blue)]">Desde $7,600 MXN</p>
+        <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20Cámaras%20CCTV" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg">💬 Cotizar</a>
       </div>
-    </section>
 
-    <!-- 🎥 SECCIÓN DE 3 VIDEOS DEMOSTRATIVOS -->
+      <!-- TARJETA 2 -->
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="./IMG/alarma.jpeg" class="max-h-full max-w-full object-contain p-3">
+        </div>
+        <h3 class="font-semibold text-lg mt-3">Alarmas de Intrusión</h3>
+        <p class="mt-2 text-gray-600 text-justify">Sistemas con sensores, paneles de control, monitoreo y mantenimientos programados.</p>
+        <p class="mt-2 font-semibold text-[var(--blue)]">Desde $3,800 MXN</p>
+        <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20una%20alarma%20de%20intrusión" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg">💬 Cotizar</a>
+      </div>
+
+      <!-- TARJETA 3 -->
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="./IMG/incend.jpeg" class="max-h-full max-w-full object-contain p-3">
+        </div>
+        <h3 class="font-semibold text-lg mt-3">Detectores de Incendios</h3>
+        <p class="mt-2 text-gray-600 text-justify">Detectores, sirenas, integración y sistemas contra incendios.</p>
+        <p class="mt-2 font-semibold text-[var(--blue)]">Desde $6,800 MXN</p>
+        <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20detectores%20de%20incendios" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg">💬 Cotizar</a>
+      </div>
+
+      <!-- TARJETA 4 -->
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="./IMG/ANTENAOMN.jpeg" class="max-h-full max-w-full object-contain p-2">
+        </div>
+        <h3 class="font-semibold text-lg mt-3">Antena Omnidireccional</h3>
+        <p class="mt-2 text-gray-600 text-justify">Enlaces, radios profesionales, repetidores y soluciones de cobertura.</p>
+        <p class="mt-2 font-semibold text-[var(--blue)]">Desde $3,600 MXN</p>
+        <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20radiocomunicación" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg">💬 Cotizar</a>
+      </div>
+
+      <!-- TARJETA 5 -->
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="./IMG/Gps2.jpeg" class="max-h-full max-w-full object-contain p-2">
+        </div>
+        <h3 class="font-semibold text-lg mt-3">GPS & Telemetría</h3>
+        <p class="mt-2 text-gray-600 text-justify">Monitoreo de activos, reportes automáticos y telemetría avanzada.</p>
+        <p class="mt-2 font-semibold text-[var(--blue)]">Desde $6,800 MXN</p>
+        <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20GPS%20y%20Telemetría" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg">💬 Cotizar</a>
+      </div>
+
+      <!-- TARJETA 6 -->
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="./IMG/panelessl.jpeg" class="max-h-full max-w-full object-contain p-2">
+        </div>
+        <h3 class="font-semibold text-lg mt-3">Paneles Solares</h3>
+        <p class="mt-2 text-gray-600 text-justify">Soluciones para mantener equipos críticos activos.</p>
+        <p class="mt-2 font-semibold text-[var(--blue)]">Desde $8,300 MXN</p>
+        <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20paneles%20solares" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg">💬 Cotizar</a>
+      </div>
+
+      <!-- TARJETA 7 -->
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="./IMG/ray.jpeg" class="max-h-full max-w-full object-contain p-3">
+        </div>
+        <h3 class="font-semibold text-lg mt-3">Cableado Estructurado & Pararrayos</h3>
+        <p class="mt-2 text-gray-600 text-justify">Infraestructura, canalización y protección profesional.</p>
+        <p class="mt-2 font-semibold text-[var(--blue)]">Desde $24,000 MXN</p>
+        <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20cableado%20estructurado" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg">💬 Cotizar</a>
+      </div>
+
+      <!-- TARJETA 8 -->
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="./IMG/cerco.jpeg" class="max-h-full max-w-full object-contain p-2">
+        </div>
+        <h3 class="font-semibold text-lg mt-3">Cercas Eléctricas</h3>
+        <p class="mt-2 text-gray-600 text-justify">Sistemas perimetrales, automatización y control de acceso.</p>
+        <p class="mt-2 font-semibold text-[var(--blue)]">Desde $12,800 MXN</p>
+        <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20cercas%20eléctricas" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg">💬 Cotizar</a>
+      </div>
+
+      <!-- TARJETA 9 -->
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="./IMG/AUFIT.jpeg" class="max-h-full max-w-full object-contain p-3">
+        </div>
+        <h3 class="font-semibold text-lg mt-3">Aire Acondicionado</h3>
+        <p class="mt-2 text-gray-600 text-justify">Suministro e instalación de equipos de refrigeración.</p>
+        <p class="mt-2 font-semibold text-[var(--blue)]">Desde $4,900 MXN</p>
+        <a href="https://wa.me/5217571341959?text=Hola,%20quiero%20cotizar%20aire%20acondicionado" target="_blank" class="mt-3 inline-block bg-[#25D366] text-white px-4 py-2 rounded-lg">💬 Cotizar</a>
+      </div>
+
+    </div>
+
+    <p class="mt-6 text-center text-sm text-gray-500">
+      ¿Quieres cotizar alguno de estos servicios? Contáctanos por WhatsApp o teléfono.
+    </p>
+
+  </div>
+</section>
+
+<!-- VIDEOS -->
 <section class="bg-white py-12 border-t">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-[var(--blue)] mb-6">Mira nuestros trabajos en acción</h2>
 
-    <!-- 🧩 Contenedor responsive con proporciones iguales -->
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="relative w-full overflow-hidden rounded-xl shadow-lg aspect-video">
-        <video controls class="absolute top-0 left-0 w-full h-full object-cover rounded-xl">
-          <source src="./VIDEO/insta.mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
-      </div>
-
-      <div class="relative w-full overflow-hidden rounded-xl shadow-lg aspect-video">
-        <video controls class="absolute top-0 left-0 w-full h-full object-cover rounded-xl">
-          <source src="./VIDEO/video (1).mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
-      </div>
-
-      <div class="relative w-full overflow-hidden rounded-xl shadow-lg aspect-video">
-        <video controls class="absolute top-0 left-0 w-full h-full object-cover rounded-xl">
-          <source src="./VIDEO/video (2).mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
-      </div>
+      <video controls class="w-full h-52 object-cover rounded-xl shadow-lg">
+        <source src="./VIDEO/insta.mp4" type="video/mp4">
+      </video>
+      <video controls class="w-full h-52 object-cover rounded-xl shadow-lg">
+        <source src="./VIDEO/video (1).mp4" type="video/mp4">
+      </video>
+      <video controls class="w-full h-52 object-cover rounded-xl shadow-lg">
+        <source src="./VIDEO/video (2).mp4" type="video/mp4">
+      </video>
     </div>
 
-    <p class="text-gray-600 mt-4 text-sm">
-      Demostraciones reales de instalación y funcionamiento de nuestros servicios.
-    </p>
+    <p class="text-gray-600 mt-4 text-sm">Demostraciones reales de instalación y funcionamiento.</p>
   </div>
 </section>
 
+<!-- MARCAS CON SCROLL ORIGINAL -->
+<section class="bg-white py-10 border-t">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-2xl font-bold text-[var(--blue)] mb-6">Marcas con las que trabajamos</h2>
 
+    <div class="overflow-hidden relative group">
+      <div class="slider flex w-max animate-scroll group-hover:[animation-play-state:paused]">
 
-    <!-- 🏢 LOGOS DE MARCAS -->
-    <section class="bg-white py-10 border-t">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-2xl font-bold text-[var(--blue)] mb-6">Marcas con las que trabajamos</h2>
+        <!-- LOGOS ORIGINALES -->
+        <img src="./IMG/ubiquiti.jpeg" class="h-14 mx-8 transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
+        <img src="./IMG/tp_link.jpeg" class="h-14 mx-8 transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
+        <img src="./IMG/huawei.jpeg" class="h-14 mx-8 transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
+        <img src="./IMG/hivision.jpeg" class="h-14 mx-8 transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
+        <img src="./IMG/EZVIMAR.jpeg" class="h-14 mx-8 transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
+        <img src="./IMG/keenwod.jpeg" class="h-14 mx-8 transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
+        <img src="./IMG/network.jpeg" class="h-14 mx-8 transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
 
-        <div class="overflow-hidden relative group">
-          <div class="slider flex w-max animate-scroll group-hover:[animation-play-state:paused]">
-            <img src="./IMG/ubiquiti.jpeg" alt="Hikvision" class="h-14 mx-8  transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
-            <img src="./IMG/tp_link.jpeg" alt="Dahua" class="h-14 mx-8 transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
-            <img src="./IMG/huawei.jpeg" alt="Epcom" class="h-14 mx-8  transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
-            <img src="./IMG/hivision.jpeg" alt="Ajax" class="h-14 mx-8  transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
-            <img src="./IMG/EZVIMAR.jpeg" alt="Intelbras" class="h-14 mx-8  transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
-            <img src="./IMG/keenwod.jpeg" alt="Steren" class="h-14 mx-8  transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
-            <img src="./IMG/network.jpeg" alt="Ubiquiti" class="h-14 mx-8  transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
-            <img src="./IMG/keenwod.jpeg" alt="MikroTik" class="h-14 mx-8 transition duration-300 hover:drop-shadow-[0_0_10px_#1d4ed8]">
+        <!-- DUPLICADOS PARA LOOP INFINITO -->
+        <img src="./IMG/ubiquiti.jpeg" class="h-14 mx-8 transition duration-300">
+        <img src="./IMG/tp_link.jpeg" class="h-14 mx-8 transition duration-300">
+        <img src="./IMG/huawei.jpeg" class="h-14 mx-8 transition duration-300">
+        <img src="./IMG/hivision.jpeg" class="h-14 mx-8 transition duration-300">
+        <img src="./IMG/EZVIMAR.jpeg" class="h-14 mx-8 transition duration-300">
+        <img src="./IMG/keenwod.jpeg" class="h-14 mx-8 transition duration-300">
+        <img src="./IMG/network.jpeg" class="h-14 mx-8 transition duration-300">
 
-            <!-- Repetición para scroll infinito -->
-            <img src="./IMG/AHUA.jpeg" alt="Hikvision" class="h-14 mx-8  transition duration-300">
-            <img src="./IMG/network.jpeg" alt="Dahua" class="h-14 mx-8  transition duration-300">
-            <img src="./IMG/EZVIMAR.jpeg" alt="Epcom" class="h-14 mx-8  transition duration-300">
-            <img src="./IMG/ubiquiti.jpeg" alt="Ajax" class="h-14 mx-8  transition duration-300">
-            <img src="./IMG/tp_link.jpeg" alt="Intelbras" class="h-14 mx-8  transition duration-300">
-            <img src="./IMG/huawei.jpeg" alt="Steren" class="h-14 mx-8  transition duration-300">
-            <img src="./IMG/hivision.jpeg" alt="Ubiquiti" class="h-14 mx-8  transition duration-300">
-            <img src="./IMG/keenwod.jpeg" alt="MikroTik" class="h-14 mx-8  transition duration-300">
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-[var(--black)] text-gray-300 py-8 mt-12">
-    <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-center md:text-left">
-      <div>
-        <img src="./IMG/logo.jfif" alt="logo" class="h-12 w-12 rounded-full mb-2 mx-auto md:mx-0 object-cover">
-        <p class="text-sm">SeguridadN.V — Instalación, venta y mantenimiento de equipos de seguridad electrónicos.</p>
-      </div>
-
-      <div>
-        <h4 class="font-semibold text-white">Contacto</h4>
-        <p class="text-sm mt-2">Tel: <a href="tel:7571341959" class="underline">757 134 1959</a></p>
-        <p class="text-sm">Correo: <a href="mailto:seguridadnv@gmail.com" class="underline">seguridadnv@gmail.com</a></p>
-        <p class="text-sm">Dirección: Calle M. Matamoros #46, Col. Centro, Tulcingo de Valle, Puebla.</p>
-      </div>
-
-      <div>
-        <h4 class="font-semibold text-white">Redes</h4>
-        <div class="flex justify-center md:justify-start gap-4 mt-3">
-          <a href="#" target="_blank">
-            <img src="./IMG/face.png" alt="Facebook" class="h-7 w-7 rounded-full hover:scale-110 transition transform shadow-lg hover:shadow-[0_0_10px_#1d4ed8]">
-          </a>
-          <a href="#" target="_blank">
-            <img src="./IMG/instagram.jpg" alt="Instagram" class="h-7 w-7 rounded-full hover:scale-110 transition transform shadow-lg hover:shadow-[0_0_10px_#dc2626]">
-          </a>
-        </div>
       </div>
     </div>
-    <div class="text-center text-xs text-gray-500 mt-6">&copy; 2025 Seguridad N.V. Todos los derechos reservados.</div>
-  </footer>
 
-  <!-- 💚 Botón flotante de WhatsApp -->
-  <a href="https://wa.me/5217571341959"
-     target="_blank"
-     aria-label="WhatsApp"
-     class="fixed right-5 bottom-5 bg-[#25D366] text-white rounded-full p-3 shadow-lg hover:bg-[#1ebe5d] hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center pulse">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="h-8 w-8">
-      <path d="M16.003 3C9.382 3 4 8.382 4 15.003c0 2.65.756 5.232 2.184 7.473L5 29l6.654-1.739A12.053 12.053 0 0 0 16.003 27C22.625 27 28 21.618 28 15.003 28 8.382 22.625 3 16.003 3zm5.671 17.17c-.233.654-1.352 1.24-1.85 1.316-.473.07-1.066.1-1.722-.107-.398-.127-.909-.295-1.556-.578-2.74-1.187-4.525-3.972-4.663-4.157-.136-.185-1.112-1.482-1.112-2.828s.705-2.01.955-2.29c.25-.28.546-.35.728-.35h.525c.169.008.398-.064.622.474.233.557.742 1.917.807 2.056.064.14.106.298.021.483-.085.184-.128.298-.25.46s-.26.3-.393.478c-.12.14-.248.292-.106.573.142.28.628 1.035 1.35 1.676.93.832 1.71 1.086 1.99 1.206.281.12.445.102.61-.06.165-.161.702-.818.89-1.097.188-.28.374-.233.622-.141.249.093 1.59.751 1.862.888.273.138.454.203.523.317.069.115.069.666-.164 1.32z"/>
-    </svg>
-  </a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-[var(--black)] text-gray-300 py-8 mt-12">
+  <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-center md:text-left">
+    
+    <div>
+      <img src="./IMG/logo.jfif" class="h-12 w-12 rounded-full mb-2 mx-auto md:mx-0">
+      <p class="text-sm">SeguridadTecN.V — Instalación, venta y mantenimiento de equipos de seguridad electrónicos.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-white">Contacto</h4>
+      <p class="text-sm mt-2">Tel: <a href="tel:7571341959" class="underline">757 134 1959</a></p>
+      <p class="text-sm">Correo: <a href="mailto:seguridadnv@gmail.com" class="underline">seguridadnv@gmail.com</a></p>
+      <p class="text-sm">Calle M. Matamoros #46, Col. Centro, Tulcingo de Valle, Puebla.</p>
+    </div>
+
+ <div>
+  <h4 class="font-semibold text-white">Redes sociales</h4>
+  <div class="flex gap-4 mt-3">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100090006570251" target="_blank"
+       class="hover:scale-110 transition">
+      <img src="./IMG/face.png"
+        class="h-9 w-9 rounded-full shadow hover:shadow-[0_0_10px_#1d4ed8]"
+        alt="Facebook SeguridadTecN.V">
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/anibalneri" target="_blank"
+       class="hover:scale-110 transition">
+      <img src="./IMG/instagram.jpg"
+        class="h-9 w-9 rounded-full shadow hover:shadow-[0_0_10px_#d62976]"
+        alt="Instagram SeguridadTecN.V">
+    </a>
+
+  </div>
+</div>
+
+
+  </div>
+
+  <p class="text-center text-xs text-gray-500 mt-6">© 2025 SeguridadTecN.V. Todos los derechos reservados.</p>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/5217571341959"
+   target="_blank"
+   class="fixed right-5 bottom-5 bg-[#25D366] text-white rounded-full p-3 shadow-lg hover:bg-[#1ebe5d] transition pulse">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="h-8 w-8">
+    <path d="M16.003 3C9.382 3 4 8.382 4 15.003c0 2.65.756 5.232 2.184 7.473L5 29l6.654-1.739A12.053 12.053 0 0 0 16.003 27C22.625 27 28 21.618 28 15.003 28 8.382 22.625 3 16.003 3zm5.671 17.17c-.233.654-1.352 1.24-1.85 1.316-.473.07-1.066.1-1.722-.107-.398-.127-.909-.295-1.556-.578-2.74-1.187-4.525-3.972-4.663-4.157-.136-.185-1.112-1.482-1.112-2.828s.705-2.01.955-2.29c.25-.28.546-.35.728-.35h.525c.169.008.398-.064.622.474.233.557.742 1.917.807 2.056.064.14.106.298.021.483-.085.184-.128.298-.25.46s-.26.3-.393.478c-.12.14-.248.292-.106.573.142.28.628 1.035 1.35 1.676.93.832 1.71 1.086 1.99 1.206.281.12.445.102.61-.06.165-.161.702-.818.89-1.097.188-.28.374-.233.622-.141.249.093 1.59.751 1.862.888.273.138.454.203.523.317.069.115.069.666-.164 1.32z"/>
+  </svg>
+</a>
 
 </body>
 </html>
+
+
+

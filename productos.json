@@ -1,171 +1,171 @@
 [
   {
-    "nombre": "Cámara Hikvision 4MP HD",
-    "precio": 1250,
+    "nombre": "Cámara Hikvision ",
+    "precio": 480,
     "imagen": "./IMG/hikvision.jpeg",
     "whatsapp": "Hola, me interesa la Cámara Hikvision 4MP HD",
     "categoria": "seguridad"
   },
   {
     "nombre": "Cámara EZVIZ WiFi Inteligente",
-    "precio": 950,
+    "precio": 2200,
     "imagen": "./IMG/EZ.jpeg",
     "whatsapp": "Hola, me interesa la Cámara EZVIZ WiFi Inteligente",
     "categoria": "seguridad"
   },
   {
     "nombre": "Cámara Dahua Full HD",
-    "precio": 2850,
-    "imagen": "./IMG/camdah.jpeg",
+    "precio": 420,
+    "imagen": "./IMG/alhua.jpeg",
     "whatsapp": "Hola, me interesa la Cámara Dahua Full HD",
     "categoria": "seguridad"
   },
   {
     "nombre": "Sistema DVR Hikvision 4 Canales",
-    "precio": 2100,
+    "precio": 490,
     "imagen": "./IMG/dvr.jpeg",
     "whatsapp": "Hola, me interesa el Sistema DVR Hikvision 4 Canales",
     "categoria": "seguridad"
   },
   {
-    "nombre": "Detector de Humo Inteligente",
-    "precio": 600,
+    "nombre": "Detector de incendio",
+    "precio": 8200,
     "imagen": "./IMG/incendio.jpeg",
     "whatsapp": "Hola, me interesa el Detector de Humo Inteligente",
     "categoria": "seguridad"
   },
   {
-    "nombre": "Alarma Ajax Inalámbrica",
-    "precio": 2800,
+    "nombre": "Alarma  Inalámbrica",
+    "precio": 8200,
     "imagen": "./IMG/alarma.jpeg",
-    "whatsapp": "Hola, me interesa la Alarma Ajax Inalámbrica",
+    "whatsapp": "Hola, me interesa la Alarma  Inalámbrica",
     "categoria": "seguridad"
   },
   {
     "nombre": "Cerca Eléctrica Residencial",
-    "precio": 3200,
+    "precio": 8800,
     "imagen": "./IMG/cerco.jpeg",
     "whatsapp": "Hola, me interesa la Cerca Eléctrica Residencial",
     "categoria": "seguridad"
   },
   {
-    "nombre": "Router TP-Link N300",
-    "precio": 400,
+    "nombre": "Router TP-Link ",
+    "precio": 480,
     "imagen": "./IMG/tplink.jpeg",
     "whatsapp": "Hola, me interesa el Router TP-Link N300",
     "categoria": "redes"
   },
   {
-    "nombre": "Antena Omni Profesional",
-    "precio": 950,
+    "nombre": "Antena Omnidireccional",
+    "precio": 4000,
     "imagen": "./IMG/ANTENAOMN.jpeg",
-    "whatsapp": "Hola, me interesa la Antena Omni Profesional",
+    "whatsapp": "Hola, me interesa la Antena Omnidireccionalional",
     "categoria": "redes"
   },
   {
     "nombre": "Antena AP Ubiquiti Sectorial",
-    "precio": 1850,
+    "precio": 900,
     "imagen": "./IMG/antena.jpeg",
     "whatsapp": "Hola, me interesa la Antena AP Ubiquiti Sectorial",
     "categoria": "redes"
   },
   {
     "nombre": "Radio Comunicador Kenwood",
-    "precio": 1250,
+    "precio": 3600,
     "imagen": "./IMG/radio3.jpeg",
     "whatsapp": "Hola, me interesa el Radio Comunicador Kenwood",
     "categoria": "redes"
   },
   {
-    "nombre": "Panel Solar 450W Monocristalino",
-    "precio": 3600,
+    "nombre": "Panel Solar 1 pieza 450W Monocristalino",
+    "precio": 5120,
     "imagen": "./IMG/paneles.jpeg",
     "whatsapp": "Hola, me interesa el Panel Solar 450W Monocristalino",
     "categoria": "energia"
   },
   {
     "nombre": "Cargador Solar Portátil 12V",
-    "precio": 550,
+    "precio": 300,
     "imagen": "./IMG/cargsolar.jpeg",
     "whatsapp": "Hola, me interesa el Cargador Solar Portátil 12V",
     "categoria": "energia"
   },
   {
     "nombre": "Audífonos Bluetooth Sony WF-C500",
-    "precio": 850,
+    "precio": 200,
     "imagen": "./IMG/audifono (1).jpeg",
     "whatsapp": "Hola, me interesan los Audífonos Bluetooth Sony WF-C500",
     "categoria": "audifonos"
   },
   {
     "nombre": "Audífonos Bluetooth Samsung Buds+",
-    "precio": 950,
+    "precio": 250,
     "imagen": "./IMG/audifono (14).jpeg",
     "whatsapp": "Hola, me interesan los Audífonos Bluetooth Samsung Buds+",
     "categoria": "audifonos"
   },
   {
-    "nombre": "Audífonos Bluetooth iPhone",
-    "precio": 900,
+    "nombre": "Audífonos Bluetooth ",
+    "precio": 180,
     "imagen": "./IMG/audifono (2).jpeg",
-    "whatsapp": "Hola, me interesan los Audífonos Bluetooth iPhone",
+    "whatsapp": "Hola, me interesan los Audífonos Bluetooth ",
     "categoria": "audifonos"
   },
   {
-    "nombre": "Audífonos Motorola L05",
-    "precio": 700,
+    "nombre": "Cargador Motorola ",
+    "precio": 180,
     "imagen": "./IMG/audifono (10).jpeg",
-    "whatsapp": "Hola, me interesan los Audífonos Motorola L05",
+    "whatsapp": "Hola, me interesan el Cargador Motorola ",
     "categoria": "audifonos"
   },
   {
-    "nombre": "Audífonos MORA Sound Pro",
-    "precio": 780,
+    "nombre": "Audífonos SONY ",
+    "precio": 230,
     "imagen": "./IMG/audifono (7).jpeg",
-    "whatsapp": "Hola, me interesan los Audífonos MORA Sound Pro",
+    "whatsapp": "Hola, me interesan los Audífonos SONY",
     "categoria": "audifonos"
   },
   {
     "nombre": "Smart Watch Deportivo",
-    "precio": 750,
+    "precio": 250,
     "imagen": "./IMG/audifono (12).jpeg",
     "whatsapp": "Hola, me interesa el Smart Watch Deportivo",
     "categoria": "smartwatch"
   },
   {
     "nombre": "Conector BNC para CCTV",
-    "precio": 50,
+    "precio": 15,
     "imagen": "./IMG/conector.jpeg",
     "whatsapp": "Hola, me interesa el Conector BNC para CCTV",
     "categoria": "conectores"
   },
   {
     "nombre": "Cable UTP CAT5e LinkPro",
-    "precio": 480,
+    "precio": 900,
     "imagen": "./IMG/CABLE5E.jpeg",
     "whatsapp": "Hola, me interesa el Cable UTP CAT5e LinkPro",
     "categoria": "conectores"
   },
   {
     "nombre": "Memoria USB 64GB",
-    "precio": 280,
+    "precio": 200,
     "imagen": "./IMG/memoria.jpeg",
     "whatsapp": "Hola, me interesa la Memoria USB 64GB",
     "categoria": "memorias"
   },
   {
     "nombre": "Cargador Samsung Original",
-    "precio": 250,
+    "precio": 280,
     "imagen": "./IMG/cargador.jpeg",
     "whatsapp": "Hola, me interesa el Cargador Samsung Original",
     "categoria": "cargadores"
   },
   {
-    "nombre": "Cargador iPhone Lightning",
-    "precio": 300,
-    "imagen": "./IMG/cargpro.jpeg",
-    "whatsapp": "Hola, me interesa el Cargador iPhone Lightning",
-    "categoria": "cargadores"
+    "nombre": "Audífono JBL ",
+    "precio": 250,
+    "imagen": "./IMG/audifono (6).jpeg",
+    "whatsapp": "Hola, me interesa el audifono JBL",
+    "categoria": "Audífonos"
   }
 ]
 
